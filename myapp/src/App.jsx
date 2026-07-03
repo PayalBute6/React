@@ -1,163 +1,72 @@
-// import { useState } from 'react';
-// import "./index.css"
+import Gallery from "./pages/gallary";
+import FilterableProductTable from "./pages/products";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-// function FilterableProductTable ({ products }){
-//   const [filterText, setFilterText] = useState('');
-//   const [inStockOnly, setInStockOnly] = useState(false);
+
+export default function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/gallery" element={<Gallery />}></Route>
+        <Route path="/products" element={<FilterableProductTable />}></Route>
+      </Routes>
+    </Router>
+  );
+}
+
+
+
+
+// function Greeting ({ name }){
+//   return <h1> Hello {name} </h1>;
+
+// }
+
+// function UserProfile({name, job}){
+//   return <h2>Job Profile of {name} {job}</h2>
+// }
+
+// export default function App(){
+//   return <UserProfile name = "John" job = "Software Engineer"/>
+// }
+
+
+
+
+// import { useMemo, useCallback, memo } from 'react';
+
+// const ExpensiveComponent = memo ( function ExpenciveComponent({ data, onClick }) {
+//   const processedData = useMemo(() => {
+//     return expensiveProcessing(data);
+//   }, [data]);
+
+//   const handleClick = useCallback((item) => {
+//     onClick(item.id);
+//   }, [onClick]);
 
 //   return(
 //     <div>
-//       <SearchBar
-//         filterText = {filterText}
-//         inStockOnly = {inStockOnly}
-//         onFilterTextChange = {setFilterText}
-//         onInStockOnlyChange = {setInStockOnly}      />
-//         <ProductTable
-//           products = {products}
-//           filterText = {filterText}
-//           inStockOnly = {inStockOnly}
-//         />
+//       {processedData.map(item => (
+//         <Item key = {item.id} onClick={() => handleClick(item)} />
+//       ))}
+//     </div>
+//   );
+// });
+
+
+
+// function ExpensiveComponent({ data, onClick }) {
+//   const processedData = expensiveProcessing(data);
+
+//   const handleClick = (item) => {
+//     onClick(item.id);
+//   };
+
+//   return (
+//     <div>
+//       {processedData.map(item => (
+//         <Item key={item.id} onClick={() => handleClick(item)} />
+//       ))}
 //     </div>
 //   );
 // }
-
-// function ProductCategoryRow({category}){
-//   return(
-//     <tr>
-//       <th colSpan="2">
-//         {category}
-//       </th>
-//     </tr>
-//   );
-// }
-
-// function ProductRow({ product }){
-//   const name = product.stocked ? product.name :
-//   <span style = {{ color : 'red' }}>
-//     {product.name}
-//   </span>;
-  
-//   return(
-//     <tr>
-//       <td>
-//         {name}
-//       </td>
-//       <td>
-//         {product.price}
-//       </td>
-//     </tr>
-//   );
-// }
-
-// function ProductTable({ products, filterText, inStockOnly }){
-//   const rows = [];
-//   let lastCategory = null;
-
-//   products.forEach((product) => {
-//     if(
-//       product.name.toLowerCase().indexOf(
-//         filterText.toLowerCase()
-//       ) === -1
-//     ){
-//       return;
-//     }
-//     if(inStockOnly && !product.stocked){
-//       return;
-//     }
-//     if(product.category !== lastCategory){
-//       rows.push(
-//         <ProductCategoryRow
-//         category={product.category}
-//         key={product.category}
-//         />
-//       );
-
-//     }
-//     rows.push(
-//       <ProductRow
-//       product={product}
-//       key={product.name}
-//       />
-//     );
-//     lastCategory = product.category;
-//   });
-//   return(
-//     <table>
-//       <thead>
-//         <tr>
-//           <th>Name</th>
-//           <th>Price</th>
-//         </tr>
-//       </thead>
-//       <tbody>{rows}</tbody>
-//     </table>
-//   );
-// }
-
-// function SearchBar({
-//   filterText,
-//   inStockOnly,
-//   onFilterTextChange,
-//   onInStockOnlyChange}){
-//   return(
-//     <form>
-//       <input 
-//         type="text"
-//         value = {filterText} placeholder="Search..."
-//         onChange = {(e) => onFilterTextChange(e.target.value)}
-//         />
-//       <label>
-//         <input 
-//         type="checkbox"
-//         checked={inStockOnly}
-//         onChange={(e) => onInStockOnlyChange(e.target.checked)}
-//         />
-//         {''}
-//         Only show products in stock
-//       </label>
-//     </form>
-//   );
-// }
-
-// // function FilterableProductTable({ products}){
-// //   return(
-// //     <div>
-// //       <SearchBar/>
-// //       <ProductTable products={products}/>
-// //     </div>
-// //   );
-// // }
-// const PRODUCTS = [
-//   {
-//     category : "Fruits",
-//     price : "150rs",
-//     stocked: true,
-//     name : "Apple"
-//   },
-//   {
-//     category : "Vegetables",
-//     price : "120rs",
-//     stocked: true,
-//     name : "Potato"
-//   },
-//   {
-//     category : "Dairy",
-//     price : "90rs",
-//     stocked: false,
-//     name : "Milk"
-//   }
-// ];
-
-// export default function App(){
-//   return <FilterableProductTable products={PRODUCTS}/>
-// }
-
-
-function Greeting ({ name }){
-  return <h1> Hello {name} </h1>;
-
-}
-
-export default function App(){
-  return <Greeting name = "world"/>
-}
