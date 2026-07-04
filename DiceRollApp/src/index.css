@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap');
+
+:root {
+  --font-main: 'Outfit', sans-serif;
+  --bg-gradient: linear-gradient(135deg, #0e0c1f 0%, #150f38 50%, #0a0617 100%);
+  --panel-bg: rgba(255, 255, 255, 0.03);
+  --panel-border: rgba(255, 255, 255, 0.06);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+  --text-primary: #ffffff;
+  --text-secondary: #a0a4c2;
+  
+  /* Dice Color HSL Values */
+  --theme-purple: 270;
+  --theme-red: 355;
+  --theme-green: 145;
+  --theme-blue: 205;
+  --theme-yellow: 42;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-main);
+  background: var(--bg-gradient);
+  color: var(--text-primary);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#root {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  border-inline: none;
+}
