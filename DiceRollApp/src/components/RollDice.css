@@ -1,0 +1,269 @@
+.RollDice {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 30px;
+  min-height: auto;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .RollDice {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Glassmorphic Play Area */
+.PlayArea-panel {
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: var(--glass-shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Dashboard-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0 0 5px 0;
+  background: linear-gradient(90deg, #c084fc, #818cf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.Dashboard-subtitle {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  margin: 0 0 25px 0;
+}
+
+/* Controls Grid */
+.Controls-container {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.Control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.Control-group label {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.Control-select {
+  background: rgba(222, 209, 209, 0.05);
+  border: 1px solid var(--panel-border);
+  color: var(--text-primary);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-family: var(--font-main);
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.Control-select:focus {
+  border-color: rgba(192, 132, 252, 0.6);
+}
+
+.Control-select option {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+
+/* Theme circles */
+.Theme-picker {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  height: 38px;
+}
+
+.Theme-btn {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.Theme-btn.active {
+  border-color: #ffffff;
+  transform: scale(1.15);
+}
+
+.Theme-btn-purple { background: hsl(var(--theme-purple), 85%, 65%); }
+.Theme-btn-red { background: hsl(var(--theme-red), 90%, 60%); }
+.Theme-btn-green { background: hsl(var(--theme-green), 85%, 55%); }
+.Theme-btn-blue { background: hsl(var(--theme-blue), 90%, 60%); }
+.Theme-btn-yellow { background: hsl(var(--theme-yellow), 95%, 55%); }
+
+/* Dice Row wrapping */
+.RollDice-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 190px;
+  margin: 10px 0;
+  width: 100%;
+}
+
+/* Action Trigger Button */
+.RollDice-btn {
+  width: 18em;
+  padding: 1.2em;
+  border: none;
+  border-radius: 12px;
+  color: #fff;
+  background: linear-gradient(135deg, #a855f7 0%, #6366f1 100%);
+  font-family: var(--font-main);
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+  outline: none;
+}
+
+.RollDice-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.55);
+}
+
+.RollDice-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.RollDice-btn:disabled {
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: var(--text-secondary);
+  box-shadow: none;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* Game Status Notifications */
+.Game-status-banner {
+  margin-top: 25px;
+  padding: 12px 25px;
+  background: rgba(192, 132, 252, 0.1);
+  border: 1px dashed rgba(192, 132, 252, 0.3);
+  border-radius: 10px;
+  text-align: center;
+  color: #c084fc;
+  font-weight: 600;
+  font-size: 1.1rem;
+  animation: pulse-border 1.5s infinite alternate;
+}
+
+@keyframes pulse-border {
+  from { border-color: rgba(192, 132, 252, 0.3); }
+  to { border-color: rgba(192, 132, 252, 0.8); }
+}
+
+/* Sidebar Analytics Panel */
+.Sidebar-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.Sidebar-card {
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: var(--glass-shadow);
+}
+
+.Sidebar-card h3 {
+  margin: 0 0 15px 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-bottom: 1px solid var(--panel-border);
+  padding-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+.Stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.Stat-box {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--panel-border);
+  border-radius: 10px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Stat-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.Stat-value {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+/* History logs list */
+.History-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 180px;
+  overflow-y: auto;
+}
+
+.History-item {
+  display: flex;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--panel-border);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  align-items: center;
+}
+
+.History-rolls {
+  display: flex;
+  gap: 4px;
+  color: var(--text-secondary);
+}
+
+.History-sum {
+  font-weight: 700;
+  color: #c084fc;
+}
