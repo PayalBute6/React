@@ -9,7 +9,7 @@ class Box extends Component{
   // Handler callback
   handleChangeColor(){
   
-    // Call parent component cahngeColor  method passing the
+    // Call parent component changeColor  method passing the
     // color value of div
     this.props.changeColor(this.props.color)
   }
