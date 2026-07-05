@@ -1,16 +1,56 @@
-# React + Vite
+# ❌⭕ Interactive Tic-Tac-Toe with Time Travel
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A clean, responsive React application built on Vite implementing the classic Tic-Tac-Toe game. It includes an interactive time-travel history board that allows players to review and jump back to previous moves in the game.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
 
-## React Compiler
+- **🎮 Dynamic Game Flow**:
+  - Automatically alternates turns between `X` and `O` players.
+  - Detects and displays the winner instantly upon a completing line of 3.
+  - Warns or ignores clicking on already occupied squares or after a win has been achieved.
+- **⏳ Time-Travel History**:
+  - Logs every move made in the game.
+  - Provides interactive navigation buttons allowing players to jump back in time to any previous state of the board.
+- **🎨 Responsive Grid**:
+  - Simple, robust layout centered on the screen with dynamic grid boundaries.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📂 Codebase Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```text
+├── public/                 # Static assets
+├── src/                    # Application source code
+│   ├── App.jsx             # Main game logic, state, and UI components (Square, Board, Game)
+│   ├── index.css           # Grid layouts, square sizing, and baseline styling
+│   └── main.jsx            # Entry point mounting <Game /> to the DOM
+├── index.html              # Main index page structure
+├── vite.config.js          # Vite config
+└── package.json            # Project configuration and script commands
+```
+
+---
+
+## 🚀 Running the App
+
+### 1. Install Dependencies
+```bash
+npm install
+```
+
+### 2. Run the Development Server
+```bash
+npm run dev
+```
+
+### 3. Build for Production
+```bash
+npm run build
+```
+
+### 4. Preview the Production Build
+```bash
+npm run preview
+```
