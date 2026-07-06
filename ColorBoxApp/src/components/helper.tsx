@@ -4,8 +4,8 @@ const rgbValue = () => {
 }
 
 // Method generates an array of rgb colors
-const generateColors = (num) => {
-  let colors = []
+const generateColors = (num: number) => {
+  let colors: string[] =[]
   
   for(let i=0; i<num; i++){
     const red = rgbValue()

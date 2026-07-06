@@ -1,7 +1,11 @@
-import React,{ Component } from 'react'
+import { Component } from 'react'
 
-class Box extends Component{
-  constructor(props){
+interface BoxProps{
+  color: string;
+  changeColor: (color: string) => void;
+}
+class Box extends Component<BoxProps>{
+  constructor(props: BoxProps){
     super(props)
     this.handleChangeColor = this.handleChangeColor.bind(this)
   }

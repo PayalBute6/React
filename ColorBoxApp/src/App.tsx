@@ -1,4 +1,4 @@
-import React from 'react'
+//import React from 'react'
 import BoxContainer from './components/BoxContainer'
 // import viteLogo from './assets/vite.svg'
 // import heroImg from './assets/hero.png'

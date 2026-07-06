@@ -1,24 +1,31 @@
-import React, { Component } from 'react'
+import { Component } from 'react'
 import './BoxContainer.css'
 import Box from './Box.tsx'
 import { rgbValue, generateColors } from './helper.tsx'
 
-class BoxContainer extends Component{
+interface BoxContainerProps{
+    num?: number;
+}
+
+interface BoxContainerState{
+    colors: string[];
+}
+class BoxContainer extends Component<BoxContainerProps, BoxContainerState>{
 
     static defaultProps = {
         num : 18
     }
-    constructor(props) {
+    constructor(props: BoxContainerProps) {
         super(props)
         this.state = {
-            colors : generateColors(this.props.num)
+            colors : generateColors(this.props.num ?? 18)
         }
         this.changeColor = this.changeColor.bind(this)
     }
 
-    changeColor(c) {
+    changeColor(c: string) {
 
-        let newColor
+        let newColor: string
         do{
             newColor = `rgb(
             ${rgbValue()},
@@ -39,12 +46,10 @@ class BoxContainer extends Component{
     render(){
         return(
             <div className = 'BoxContainer'>
-                {this.state.colors.map(color => (
-                    <Box color = {color} changeColor={this.changeColor}/>
+                {this.state.colors.map((color, index) => (
+                    <Box key={index} color = {color} changeColor={this.changeColor}/>
                 ))}
             </div>          
-           
-           
         )
     }
 }
