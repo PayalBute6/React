@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Result from './Result'
+import Result from './components/Result.jsx'
 import './App.css'
 
 class App extends Component {

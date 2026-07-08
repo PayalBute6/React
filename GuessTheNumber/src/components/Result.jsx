@@ -4,16 +4,16 @@ const Result = ({ term, secretNum}) => {
     let result;
     if(term){
         if(secretNum > term){
-            result = 'Lower'
+            result = 'Higher';
         }
         else if (secretNum < term) {
-            result = 'Higher'
+            result = 'Lower';
         }
         else if (secretNum == term){
-            result = 'Yuppiee Correct!!'
+            result = 'Yuppiee Correct!!';
         }
         else{
-            result = "Enter Valid Input"
+            result = "Enter Valid Input";
         }
     }
     return <h3>You Guessed: { result }</h3>
