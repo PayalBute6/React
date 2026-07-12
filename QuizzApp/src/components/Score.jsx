@@ -13,7 +13,7 @@ const Score = ({ score, totalQuestions, onRestart, questions, userAnswers }) => 
             </div>
             
             <div className="text-start my-4 results-report" style={{ maxHeight: '250px', overflowY: 'auto', paddingRight: '8px' }}>
-                <h5 className="mb-3 text-muted">Answer Summary:</h5>
+                <h5 className="mb-3 text">Answer Summary:</h5>
                 {questions.map((q, idx) => {
                     const userAnswer = userAnswers[idx];
                     const isCorrect = userAnswer === q.answer;
