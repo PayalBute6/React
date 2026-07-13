@@ -16,8 +16,8 @@ body {
   letter-spacing: 2px;
   background: linear-gradient(to right, #a855f7, #6366f1);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
-  
 }
 
 .options-container {
