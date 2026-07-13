@@ -1,16 +1,63 @@
-# React + Vite
+# FlipCoinApp - Interactive React Coin Flip Simulator
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+An interactive, modern React application built with **Vite** that simulates a 3D coin flip and tracks real-time statistics (total flips, heads, and tails).
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* **3D Coin Flip Animation:** Features a smooth 3D spinning animation using CSS perspective and custom keyframes when flipping the coin.
+* **Modern React architecture:** Built using **React Functional Components** and **React Hooks** (`useState`).
+* **Real-time Statistics Tracker:** Dynamically tracks total flips, total heads, and total tails.
+* **Reset Stats:** Reset the counts and visual state back to default at any time.
+* **Premium Glassmorphic UI:** Styled with a responsive glassmorphic UI, color gradients, and micro-interactions.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
 
-## Expanding the Oxlint configuration
+* **Core:** React (Functional Components, Hooks)
+* **Build Tool:** Vite
+* **Styling:** Vanilla CSS with standard vendor-compatible properties
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+---
+
+## 💻 Getting Started
+
+### Prerequisites
+
+* [Node.js](https://nodejs.org/) installed on your machine.
+
+### Installation & Run
+
+1. Navigate to the project directory:
+   ```bash
+   cd FlipCoinApp
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the local development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Open [http://localhost:5173](http://localhost:5173) in your browser to view the application.
+
+---
+
+## 📂 Project Structure
+
+```text
+FlipCoinApp/
+├── src/
+│   ├── Components/
+│   │   ├── Coin.jsx       # Component representing the visual coin faces
+│   │   └── FlipCoin.jsx   # Core logic, state tracker, and controls
+│   ├── App.jsx            # Main app container
+│   ├── App.css            # Styles, glassmorphic layout, and 3D spin keyframes
+│   ├── index.css          # Core CSS variables and global theme settings
+│   └── main.jsx           # App entry point
+└── package.json
+```
