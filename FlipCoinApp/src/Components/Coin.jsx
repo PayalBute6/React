@@ -1,16 +1,15 @@
-import React, { Component } from 'react'
+import React from 'react';
 
-class Coin extends Component {
-    render() {
-        return (
-            <div class='Coin'>
-                <img
-                    style={{ width: '200px', height: '200px' }}
-                    src={this.props.info.imgSrc}
-                />
-            </div>
-        )
-    }
-}
+const Coin = ({ info, isFlipping }) => {
+  return (
+    <div className="Coin-container">
+      <img
+        className={`Coin-img ${isFlipping ? 'flipping' : ''}`}
+        src={info.imgSrc}
+        alt={info.side}
+      />
+    </div>
+  );
+};
 
-export default Coin
+export default Coin;

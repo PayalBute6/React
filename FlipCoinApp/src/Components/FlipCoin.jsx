@@ -1,76 +1,96 @@
-import React, { Component } from 'react'
-import Coin from './Coin'
+import React, { useState } from 'react';
+import Coin from './Coin';
 
-class FlipCoin extends Component {
-    static defaultProps = {
-        coins: [
-            // Sides of the coin
-            {
-                side: 'head', 
-                imgSrc:
-'https://media.geeksforgeeks.org/wp-content/uploads/20200916123059/SHalfDollarObverse2016head-300x300.jpg'
-            },
-            {
-                side: 'tail', 
-                imgSrc:
-'https://media.geeksforgeeks.org/wp-content/uploads/20200916123125/tails-200x200.jpg'
-            }
-        ]
-    }
+const COINS = [
+  {
+    side: 'head',
+    imgSrc: 'https://media.geeksforgeeks.org/wp-content/uploads/20200916123059/SHalfDollarObverse2016head-300x300.jpg'
+  },
+  {
+    side: 'tail',
+    imgSrc: 'https://media.geeksforgeeks.org/wp-content/uploads/20200916123125/tails-200x200.jpg'
+  }
+];
 
-    constructor(props) {
-        super(props)
-        // Responsible to render current updated coin face
-        this.state = {
-            // Track total number of flips
-            currFace: null,
-            totalFlips: 0,
-            heads: 0
-        }
-        // Binding context of this keyword
-        this.handleClick = this.handleClick.bind(this)
-    }
+const FlipCoin = () => {
+  const [currFace, setCurrFace] = useState(null);
+  const [totalFlips, setTotalFlips] = useState(0);
+  const [heads, setHeads] = useState(0);
+  const [isFlipping, setIsFlipping] = useState(false);
 
-    // Function takes array of different faces of a coin
-    //  and return a random chosen single face
-    choice(arr) {
-        const randomIdx = Math.floor(Math.random() * arr.length)
-        return arr[randomIdx]
-    }
+  const flipCoin = () => {
+    if (isFlipping) return;
 
-    // Function responsible to update the states
-    // according to users interactions
-    flipCoin() {
-        const newFace = this.choice(this.props.coins)
-        this.setState(curState => {
-            const heads = curState.heads +
-                (newFace.side === 'head' ? 1 : 0)
-            return {
-                currFace: newFace,
-                totalFlips: curState.totalFlips + 1,
-                heads: heads
-            }
-        })
-    }
-    handleClick() {   
-        this.flipCoin()
-    }
-    render() {
-        const { currFace, totalFlips, heads } = this.state
-        return (
-            <div>
-                <h2>Let's flip a coin</h2>
-                {/* If current face exist then show current face */}
-                {currFace && <Coin info={currFace} />}
-                {/* Button to flip the coin  */}
-                <button onClick={this.handleClick}>Flip Me!</button>
-                <p>
-                    Out of {totalFlips} flips, there have been {heads} heads
-                    and {totalFlips - heads} tails
-                </p>
-            </div>
-        )
-    }
-}
+    setIsFlipping(true);
 
-export default FlipCoin
+    const randomIdx = Math.floor(Math.random() * COINS.length);
+    const newFace = COINS[randomIdx];
+
+    // Wait for the 3D flip animation (600ms) to complete before updating stats
+    setTimeout(() => {
+      setCurrFace(newFace);
+      setTotalFlips((prev) => prev + 1);
+      if (newFace.side === 'head') {
+        setHeads((prev) => prev + 1);
+      }
+      setIsFlipping(false);
+    }, 600);
+  };
+
+  const resetStats = () => {
+    setCurrFace(null);
+    setTotalFlips(0);
+    setHeads(0);
+  };
+
+  const tails = totalFlips - heads;
+
+  return (
+    <div className="FlipCoin-card">
+      <h2 className="FlipCoin-title">Flip a Coin</h2>
+      
+      <div className="Coin-display-area">
+        {currFace ? (
+          <Coin info={currFace} isFlipping={isFlipping} />
+        ) : (
+          <div className="Coin-placeholder">Click flip to start!</div>
+        )}
+      </div>
+
+      <div className="button-group">
+        <button 
+          className="btn btn-primary" 
+          onClick={flipCoin} 
+          disabled={isFlipping}
+        >
+          {isFlipping ? 'Flipping...' : 'Flip Me!'}
+        </button>
+        
+        <button 
+          className="btn btn-secondary" 
+          onClick={resetStats} 
+          disabled={totalFlips === 0 || isFlipping}
+        >
+          Reset
+        </button>
+      </div>
+
+      <div className="stats-dashboard">
+        <div className="stat-item">
+          <span className="stat-value">{totalFlips}</span>
+          <span className="stat-label">Total Flips</span>
+        </div>
+        <div className="stat-item">
+          <span className="stat-value">{heads}</span>
+          <span className="stat-label">Heads</span>
+        </div>
+        <div className="stat-item">
+          <span className="stat-value">{tails}</span>
+          <span className="stat-label">Tails</span>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default FlipCoin;
