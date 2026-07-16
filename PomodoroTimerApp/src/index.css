@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;400;500;700;900&display=swap');
+
+:root {
+  /* Color Palettes */
+  --work-primary: #ff6b6b;
+  --work-primary-glow: rgba(255, 107, 107, 0.35);
+  
+  --break-primary: #2ecc71;
+  --break-primary-glow: rgba(46, 204, 113, 0.35);
+  
+  /* Shared Dark Theme Colors */
+  --text-main: #ffffff;
+  --text-muted: #a4b0be;
+  
+  --bg-gradient-work: linear-gradient(135deg, #1a1616 0%, #0d0707 100%);
+  --bg-gradient-break: linear-gradient(135deg, #111815 0%, #070d0b 100%);
+
+  /* Fonts */
+  --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Animation Speeds */
+  --transition-speed: 0.6s;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--text-main);
+  background: var(--bg-gradient-work);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: background var(--transition-speed) ease-in-out;
+}
+
+/* Helper Class to change backgrounds dynamically */
+body.break-mode {
+  background: var(--bg-gradient-break);
+}
+
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}

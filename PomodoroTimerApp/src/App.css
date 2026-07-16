@@ -1,0 +1,224 @@
+/* Container Layout */
+.pomodoro-container {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 32px;
+  padding: 40px;
+  width: 420px;
+  max-width: 100%;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4), 
+              inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  transition: border-color var(--transition-speed) ease;
+}
+
+/* App Title styling with text gradient */
+.app-title {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #fff;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+/* Circular Timer Center Deck */
+.timer-ring-container {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.timer-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(-90deg); /* Start progress circle from the top */
+}
+
+/* Circular SVG Rings */
+.timer-ring-bg {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.03);
+  stroke-width: 8px;
+}
+
+.timer-ring-progress {
+  fill: none;
+  stroke-width: 8px;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.35s linear, stroke var(--transition-speed) ease;
+}
+
+/* Dynamically color the timer progress based on application state */
+body:not(.break-mode) .timer-ring-progress {
+  stroke: var(--work-primary);
+  filter: drop-shadow(0 0 8px var(--work-primary));
+}
+
+body.break-mode .timer-ring-progress {
+  stroke: var(--break-primary);
+  filter: drop-shadow(0 0 8px var(--break-primary));
+}
+
+/* Glowing Pulsing state while running */
+.timer-ring-container.ticking {
+  animation: pulse-glow 3s infinite ease-in-out;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2), inset 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 35px var(--work-primary-glow), inset 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+}
+
+body.break-mode .timer-ring-container.ticking {
+  animation: pulse-glow-break 3s infinite ease-in-out;
+}
+
+@keyframes pulse-glow-break {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2), inset 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 35px var(--break-primary-glow), inset 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Numbers Display in SVG Center */
+.time-display {
+  font-family: var(--font-mono);
+  font-size: 54px;
+  font-weight: 700;
+  letter-spacing: -2px;
+  color: #fff;
+  z-index: 2;
+  user-select: none;
+}
+
+/* Action Controls (Play/Pause/Reset/Skip) */
+.control-deck {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+.btn {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 600;
+  padding: 14px 24px;
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+  flex: 1;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.btn-primary {
+  color: #111;
+  background: #ffffff;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.15);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  background: #f1f2f6;
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.25);
+}
+
+.btn-secondary {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+/* Duration Setting Panels */
+.duration-settings {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+.setting-card {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  padding: 16px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.setting-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.setting-controls {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.setting-controls button {
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.setting-controls button:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.setting-controls button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.duration-val {
+  font-family: var(--font-mono);
+  font-size: 18px;
+  font-weight: 700;
+  min-width: 38px;
+  text-align: center;
+}
