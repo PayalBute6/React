@@ -17,6 +17,7 @@ Here is a quick overview of the applications contained in this repository:
 | **📝 ToDoApp** | A standard task management application. | CRUD operations in React, local storage persistence, and listing/filtering. |
 | **❓ QuizzApp** | An interactive trivia quiz. | Score tracking, progress indicators, multiple-choice rendering, and result screens. |
 | **🎨 ColorBoxApp** | A vibrant grid of interactive color boxes. | Dynamic style binding, event propagation, and random color generators. |
+| **🍅 PomodoroTimerApp** | A premium glassmorphic Pomodoro Timer. | Web Audio API sound synthesis, dynamic page gradients, React timer state intervals, and SVG circular progress. |
 | **🧪 myapp** | Sandbox starter application. | Used for experimentation, prototyping React components, and testing concepts. |
 
 ---
