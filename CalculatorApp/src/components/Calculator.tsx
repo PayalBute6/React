@@ -1,8 +1,10 @@
+import { useEffect, useState } from "react";
 import Display from "./Display";
 import Button from "./Button";
 import ThemeToggle from "./ThemeToggle";
 import useCalculator from "../hooks/useCalculator";
 import evaluateExpression from "../utils/evaluateExpression";
+import History from "./HistoryDrawer";
 
 function Calculator(){
 
@@ -11,13 +13,17 @@ function Calculator(){
     //     console.log(value);
 
     // };
-
+    
     const {
         expression,
         result,
+        history,
+        setHistory,
         setExpression,
         setResult
     } = useCalculator();
+
+    const [showHistory, setShowHistory] = useState(false);
     const buttons = [
 
     "AC", "⌫", "%", "÷",
@@ -49,11 +55,25 @@ function Calculator(){
 
         if (value === "="){
 
-            console.log("Equal pressed");
-            console.log("Expression:", expression);
+            // console.log("Equal pressed");
+            // console.log("Expression:", expression);
             const answer = evaluateExpression(expression);
             if(!isNaN(answer)){
-                setResult(answer.toString());
+
+                const answerText = answer.toString();
+
+                setResult(answerText);
+
+                setHistory(prev => [
+                    
+                   ...prev,
+                   {
+                    expression,
+                    result: answerText
+                   }
+
+                ]);
+                                
             }else{
                 setResult("Error");
             }
@@ -83,14 +103,38 @@ function Calculator(){
             return;
         }
     };
+useEffect(() => {
+console.log("useEffect is running");
+    const handleKeyDown = () => {
+
+        // TODO: Implement keyboard support
+
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+
+        window.removeEventListener("keydown", handleKeyDown);
+
+    };
+
+}, []);
 
     return(
 
         <div className="calculator">
 
+            <History 
+                history={history} 
+                isOpen={showHistory} 
+                onClose={() => setShowHistory(false)} 
+                onClear={() => setHistory([])}
+            />
+
             <div className="header">
 
-                <button className="calc-btn">
+                <button className="calc-btn" onClick={() => setShowHistory(true)}>
                     ☰
                 </button>
 
@@ -138,6 +182,7 @@ function Calculator(){
             </div>
 
         </div>
+        
 
     );
 
