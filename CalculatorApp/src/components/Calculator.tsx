@@ -1,10 +1,12 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Display from "./Display";
-import Button from "./Button";
+import Keypad from "./Keypad";
 import ThemeToggle from "./ThemeToggle";
 import useCalculator from "../hooks/useCalculator";
 import evaluateExpression from "../utils/evaluateExpression";
 import History from "./HistoryDrawer";
+import useKeyboard from "../hooks/useKeyboard";
+import useTheme from "../hooks/useTheme";
 
 function Calculator(){
 
@@ -23,7 +25,10 @@ function Calculator(){
         setResult
     } = useCalculator();
 
+    const { theme, toggleTheme } = useTheme();
+
     const [showHistory, setShowHistory] = useState(false);
+
     const buttons = [
 
     "AC", "⌫", "%", "÷",
@@ -103,23 +108,7 @@ function Calculator(){
             return;
         }
     };
-useEffect(() => {
-console.log("useEffect is running");
-    const handleKeyDown = () => {
-
-        // TODO: Implement keyboard support
-
-    };
-
-    window.addEventListener("keydown", handleKeyDown);
-
-    return () => {
-
-        window.removeEventListener("keydown", handleKeyDown);
-
-    };
-
-}, []);
+    useKeyboard({ onKeyPress: handleClick });
 
     return(
 
@@ -140,9 +129,9 @@ console.log("useEffect is running");
 
                 <ThemeToggle
 
-                    theme="light"
+                    theme={theme}
 
-                    toggleTheme={()=>{}}
+                    toggleTheme={toggleTheme}
 
                 />
 
@@ -158,28 +147,11 @@ console.log("useEffect is running");
 
             />
 
-            <div className="keypad">
-
-                {
-                buttons.map(btn=>(
-
-                    <Button
-
-                        key={btn}
-
-                        value={btn}
-
-                        operator={
-                            ["+","-","×","÷","="].includes(btn)
-                        }
-
-                        onClick={handleClick}
-
-                    />
-
-                ))}
-
-            </div>
+            <Keypad 
+                buttons={buttons} 
+                operators={operators} 
+                onButtonClick={handleClick} 
+            />
 
         </div>
         
