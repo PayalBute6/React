@@ -32,19 +32,9 @@ function Calculator(){
 
   ];
 
-  const operators = ["+", "-", "×", "÷", "="];
+  const operators = ["+", "-", "×", "÷"];
 
   const handleClick=(value:string)=>{
-
-        if(!isNaN(Number(value))){
-            setExpression((prev) => prev + value);
-            return;
-        }
-
-        if(value==="."){
-            setExpression((prev) => prev + ".");
-            return;
-        }
 
         if(value==="AC"){
             setExpression("");
@@ -54,6 +44,24 @@ function Calculator(){
 
         if(value==="⌫"){
             setExpression((prev) => prev.slice(0, -1));
+            return;
+        }
+
+        if (value === "="){
+
+            console.log("Equal pressed");
+            console.log("Expression:", expression);
+            const answer = evaluateExpression(expression);
+            if(!isNaN(answer)){
+                setResult(answer.toString());
+            }else{
+                setResult("Error");
+            }
+            return;
+        }
+
+        if(value==="."){
+            setExpression((prev) => prev + ".");
             return;
         }
 
@@ -70,13 +78,8 @@ function Calculator(){
             return;
         }
 
-        if (value === "="){
-            const answer = evaluateExpression(expression);
-            if(!isNaN(answer)){
-                setResult(answer.toString());
-            }else{
-                setResult("Error");
-            }
+        if(!isNaN(Number(value))){
+            setExpression((prev) => prev + value);
             return;
         }
     };
