@@ -1,0 +1,24 @@
+*{
+    transition:
+        background .35s,
+        color .35s,
+        border .35s,
+        transform .15s;
+}
+
+button:active{
+    transform:scale(.95);
+}
+
+@keyframes slideIn{
+
+    from{
+        transform:translateX(100%);
+        opacity:0;
+    }
+
+    to{
+        transform:translateX(0);
+        opacity:1;
+    }
+}

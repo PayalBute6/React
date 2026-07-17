@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  font-family: Outfit, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+}
+
+.calculator {
+  width: 380px;
+
+  background: var(--surface);
+
+  backdrop-filter: blur(20px);
+
+  border: 1px solid var(--surface-border);
+
+  border-radius: var(--radius);
+
+  box-shadow: var(--shadow);
+
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+
+  justify-content: space-between;
+
+  padding: 18px;
+}
+
+.display {
+  padding: 30px;
+
+  text-align: right;
+
+  min-height: 120px;
+}
+
+.expression {
+  color: var(--secondary);
+
+  font-size: 1.2rem;
+
+  margin-bottom: 15px;
+}
+
+.result {
+  font-size: 2.8rem;
+
+  font-weight: bold;
+}
+
+.keypad {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 12px;
+
+  padding: 18px;
+}
+
+.calc-btn {
+  height: 70px;
+
+  border: none;
+
+  border-radius: 18px;
+
+  background: rgba(255,255,255,.25);
+
+  color: var(--text);
+
+  font-size: 1.2rem;
+
+  cursor: pointer;
+
+  backdrop-filter: blur(10px);
+}
+
+.calc-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 10px 18px rgba(0,0,0,.15);
+}
+
+.operator {
+  background: var(--accent);
+
+  color: white;
+}
+
+.operator:hover {
+  background: var(--accent-hover);
+}
