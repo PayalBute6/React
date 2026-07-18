@@ -35,6 +35,9 @@ export function calculate(
             return left * right;
 
         case "÷":
+            if (right === 0) {
+                throw new Error("Cannot divide by zero");
+            }
             return left / right;
 
         default:

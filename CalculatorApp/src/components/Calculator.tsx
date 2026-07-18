@@ -59,34 +59,121 @@ function Calculator(){
         }
 
         if (value === "="){
+            try {
+                // Clean trailing operators if any exist
+                let cleanedExpr = expression.trim();
+                while (operators.includes(cleanedExpr.slice(-1))) {
+                    cleanedExpr = cleanedExpr.slice(0, -1);
+                }
+                
+                if (cleanedExpr === "") {
+                    return;
+                }
 
-            // console.log("Equal pressed");
-            // console.log("Expression:", expression);
-            const answer = evaluateExpression(expression);
-            if(!isNaN(answer)){
-
-                const answerText = answer.toString();
-
-                setResult(answerText);
-
-                setHistory(prev => [
-                    
-                   ...prev,
-                   {
-                    expression,
-                    result: answerText
-                   }
-
-                ]);
-                                
-            }else{
-                setResult("Error");
+                const answer = evaluateExpression(cleanedExpr);
+                if(!isNaN(answer)){
+                    const answerText = answer.toString();
+                    setResult(answerText);
+                    setHistory(prev => [
+                       ...prev,
+                       {
+                        expression: cleanedExpr,
+                        result: answerText
+                       }
+                    ]);
+                } else {
+                    setResult("Error");
+                }
+            } catch (e: any) {
+                setResult(e.message || "Error");
             }
             return;
         }
 
+        // Sign Toggle (+/-)
+        if (value === "+/-") {
+            setExpression((prev) => {
+                if (prev === "") return prev;
+                
+                let lastOperatorIdx = -1;
+                for (let i = prev.length - 1; i >= 0; i--) {
+                    if (operators.includes(prev[i])) {
+                        if (prev[i] === "-" && (i === 0 || operators.includes(prev[i - 1]))) {
+                            continue;
+                        }
+                        lastOperatorIdx = i;
+                        break;
+                    }
+                }
+
+                if (lastOperatorIdx === -1) {
+                    if (prev.startsWith("-")) {
+                        return prev.slice(1);
+                    } else {
+                        return "-" + prev;
+                    }
+                } else {
+                    const before = prev.slice(0, lastOperatorIdx + 1);
+                    const lastNumber = prev.slice(lastOperatorIdx + 1);
+                    if (lastNumber.startsWith("-")) {
+                        return before + lastNumber.slice(1);
+                    } else {
+                        return before + "-" + lastNumber;
+                    }
+                }
+            });
+            return;
+        }
+
+        // Percentage (%)
+        if (value === "%") {
+            setExpression((prev) => {
+                if (prev === "") return prev;
+                
+                let lastOperatorIdx = -1;
+                for (let i = prev.length - 1; i >= 0; i--) {
+                    if (operators.includes(prev[i])) {
+                        if (prev[i] === "-" && (i === 0 || operators.includes(prev[i - 1]))) {
+                            continue;
+                        }
+                        lastOperatorIdx = i;
+                        break;
+                    }
+                }
+
+                if (lastOperatorIdx === -1) {
+                    const num = Number(prev);
+                    if (isNaN(num)) return prev;
+                    return (num / 100).toString();
+                } else {
+                    const before = prev.slice(0, lastOperatorIdx + 1);
+                    const lastNumber = prev.slice(lastOperatorIdx + 1);
+                    const num = Number(lastNumber);
+                    if (isNaN(num) || lastNumber === "") return prev;
+                    return before + (num / 100).toString();
+                }
+            });
+            return;
+        }
+
         if(value==="."){
-            setExpression((prev) => prev + ".");
+            setExpression((prev) => {
+                if (prev === "") return "0.";
+                const lastChar = prev.slice(-1);
+                
+                if (operators.includes(lastChar)) {
+                    return prev + "0.";
+                }
+                
+                const parts = prev.split(/[\+\-×÷]/);
+                const lastNumber = parts[parts.length - 1];
+                
+                if (lastNumber.includes(".")) {
+                    return prev;
+                }
+                
+                return prev + ".";
+            });
             return;
         }
 
