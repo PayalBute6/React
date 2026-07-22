@@ -1,16 +1,39 @@
-//import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from './assets/vite.svg'
-// import heroImg from './assets/hero.png'
-// //import './App.css'
+import "./styles/App.css";
+
+import Editor from "./components/Editor";
+
+import useMarkdown from "./hooks/useMarkdown";
+
+import Preview from "./components/Preview";
+
 
 function App() {
 
-return (
- <>
-Hello, It's just a setup
- </>
-)
+    const {
+
+        markdown,
+
+        setMarkdown
+
+    } = useMarkdown();
+
+    return (
+
+        <div className="app">
+
+    <Editor
+        markdown={markdown}
+        setMarkdown={setMarkdown}
+    />
+
+    <Preview
+        markdown={markdown}
+    />
+
+</div>
+
+    );
+
 }
 
-export default App
+export default App;
