@@ -10,24 +10,26 @@ Here is a quick overview of the applications contained in this repository:
 
 | Project Icon & Name | Description | Key Learnings & Features |
 | :--- | :--- | :--- |
-| **Tic-Tac-Toe** | The classic two-player board game. | State sharing, turn management, and win-condition algorithms. |
-| **FlipCoinApp** | A fun coin-toss simulator. | State updates, tracking statistics (heads vs. tails ratio), and image rendering. |
+| **CalculatorApp** | Modern glassmorphic calculator. | Custom React hooks (`useCalculator`, `useKeyboard`, `useTheme`), keyboard listener integration, persistent dark/light theme, expression parser, and slide-out calculation history drawer. |
+| **ColorBoxApp** | Vibrant grid of interactive color boxes. | Dynamic style binding, event propagation, and random color generators. |
 | **DiceRollApp** | A simulator for rolling dice. | CSS animations (shake/roll effect), random state generation, and custom SVGs. |
-| **GuessTheNumber** | A numbers game where the user guesses a secret number. | Conditional feedback, input validation, and attempt counters. |
-| **ToDoApp** | A standard task management application. | CRUD operations in React, local storage persistence, and listing/filtering. |
-| **QuizzApp** | An interactive trivia quiz. | Score tracking, progress indicators, multiple-choice rendering, and result screens. |
-| **ColorBoxApp** | A vibrant grid of interactive color boxes. | Dynamic style binding, event propagation, and random color generators. |
+| **FlipCoinApp** | A fun coin-toss simulator. | State updates, tracking statistics (heads vs. tails ratio), and image rendering. |
+| **GuessTheNumber** | Guess the secret number game. | Conditional feedback, input validation, and attempt counters. |
+| **MarkdownPreviewer** | Real-time Markdown editor and live previewer. | Safely parses Markdown to HTML using `marked` and `DOMPurify` with a responsive side-by-side editing layout. |
 | **PomodoroTimerApp** | A premium glassmorphic Pomodoro Timer. | Web Audio API sound synthesis, dynamic page gradients, React timer state intervals, and SVG circular progress. |
+| **QuizzApp** | An interactive trivia quiz. | Score tracking, progress indicators, multiple-choice rendering, and result screens. |
+| **TicTacToe** | The classic two-player board game. | State sharing, turn management, and win-condition algorithms. |
+| **ToDoApp** | A standard task management application. | CRUD operations in React, local storage persistence, and listing/filtering. |
 | **myapp** | Sandbox starter application. | Used for experimentation, prototyping React components, and testing concepts. |
 
 ---
 
 ## Tech Stack & Concepts Covered
 
-- **Frontend Core:** React.js, JavaScript (ES6+), HTML5, CSS3
-- **State Management:** `useState`, `useEffect`, and component prop passing
-- **Styling:** Custom CSS with responsive layouts (Flexbox/Grid), transitions, and CSS variables
-- **Build Tools:** Vite, npm / Yarn
+- **Frontend Core:** React.js, TypeScript, JavaScript (ES6+), HTML5, CSS3
+- **State Management:** Custom React hooks, standard hooks (`useState`, `useEffect`, `useMemo`, `useCallback`), and component prop passing
+- **Styling:** Custom CSS with responsive layouts (Flexbox/Grid), transitions, and CSS variables for theme management
+- **Build Tools:** Vite, Next.js, npm / Yarn
 
 ---
 
