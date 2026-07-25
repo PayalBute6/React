@@ -6,6 +6,7 @@ import useMarkdown from "./hooks/useMarkdown";
 
 import Preview from "./components/Preview";
 
+import Toolbar from "./components/Toolbar";
 
 function App() {
 
@@ -17,22 +18,35 @@ function App() {
 
     } = useMarkdown();
 
+    function handleClear() {
+        setMarkdown("");
+    };
+
     return (
 
-        <div className="app">
+    <div className="app-container">
 
-    <Editor
-        markdown={markdown}
-        setMarkdown={setMarkdown}
-    />
+        <Toolbar
+    markdown={markdown}
+    onClear={handleClear}
+/>
 
-    <Preview
-        markdown={markdown}
-    />
+        <main className="workspace">
 
-</div>
+            <Editor
+                markdown={markdown}
+                setMarkdown={setMarkdown}
+            />
 
-    );
+            <Preview
+                markdown={markdown}
+            />
+
+        </main>
+
+    </div>
+
+);
 
 }
 

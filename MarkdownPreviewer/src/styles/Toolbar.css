@@ -1,0 +1,69 @@
+.toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 16px 20px;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+.toolbar-title h1 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.toolbar-title span {
+    display: block;
+
+    margin-top: 4px;
+
+    color: rgba(255, 255, 255, 0.55);
+
+    font-size: 12px;
+}
+
+.toolbar-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.toolbar-btn {
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    padding: 10px 14px;
+
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    transition: 0.2s ease;
+}
+
+.toolbar-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+
+    transform: translateY(-1px);
+}
+
+.toolbar-btn.danger:hover {
+    background: rgba(239, 68, 68, 0.2);
+
+    border-color: rgba(239, 68, 68, 0.4);
+}
