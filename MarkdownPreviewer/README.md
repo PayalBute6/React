@@ -1,16 +1,20 @@
 # 📝 Markdown Previewer
 
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-8-646CFF?logo=vite&logoColor=white)
+
 A real-time, side-by-side Markdown editor and preview application built with **React**, **TypeScript**, and **Vite**. This application features secure markdown rendering with custom styling and document templating support.
 
 ---
 
 ## ✨ Features
 
-- **Real-Time Preview**: Type in markdown on the left pane and see the rendered HTML update instantly on the right.
-- **Secure Rendering**: Built-in HTML sanitization via `dompurify` to protect against Cross-Site Scripting (XSS) attacks.
-- **Predefined Templates**: Jumpstart your documents with ready-to-use template guides (e.g., GitHub README template).
-- **TypeScript Support**: Full type safety across components, utilities, and hooks.
-- **Fast Build Times**: Powered by Vite and Oxlint for high-performance development and linting.
+- **⚡ Real-Time Preview**: Type markdown on the left pane and see the rendered HTML update instantly on the right.
+- **🔒 Secure Rendering**: Built-in HTML sanitization via `DOMPurify` to protect against Cross-Site Scripting (XSS) attacks.
+- **📜 Predefined Templates**: Jumpstart your documents with ready-to-use template guides (e.g., GitHub README template).
+- **🛡️ TypeScript Support**: Full type safety across components, utilities, and custom hooks.
+- **⚡ Fast Build Times**: Powered by Vite and Oxlint for high-performance development and linting.
 
 ---
 
@@ -32,19 +36,18 @@ MarkdownPreviewer/
 ├── src/
 │   ├── assets/            # Static assets
 │   ├── components/        # UI components
-│   │   ├── Editor.tsx     # Markdown editor textarea input
-│   │   ├── Preview.tsx    # Sanitized preview container
-│   │   ├── Toolbar.tsx    # Actions toolbar (copy, templates)
-│   │   └── ...
+│   │   ├── Editor.tsx     # Markdown editor input area
+│   │   ├── Preview.tsx    # Sanitized HTML preview pane
+│   │   └── Toolbar.tsx    # Action bar (copy, templates)
 │   ├── hooks/             # Custom React hooks
-│   │   └── useMarkdown.ts # Manage editor state
+│   │   └── useMarkdown.ts # Editor state hook
 │   ├── styles/            # CSS styles per component
-│   ├── types/             # TypeScript types and interfaces
-│   ├── utils/             # Helper utilities (parsing, templates)
-│   │   ├── parser.ts      # Markdown parsing & sanitization logic
-│   │   └── templates.ts   # Defined markdown templates
+│   ├── types/             # Shared TypeScript types
+│   ├── utils/             # Helper utilities
+│   │   ├── parser.ts      # Markdown parsing & DOMPurify sanitization
+│   │   └── templates.ts   # Defined markdown document templates
 │   ├── App.tsx            # Main application layout
-│   └── main.tsx           # Entry point
+│   └── main.tsx           # Application entry point
 ├── package.json           # Project dependencies & scripts
 ├── tsconfig.json          # TypeScript configurations
 └── vite.config.ts         # Vite configuration
@@ -54,52 +57,34 @@ MarkdownPreviewer/
 
 ## 🚀 Getting Started
 
-Follow these instructions to run the project locally.
-
 ### Prerequisites
 
-Make sure you have Node.js installed on your machine.
 - [Node.js (v18 or higher recommended)](https://nodejs.org/)
 
-### Installation
+### Installation & Run
 
-1. Navigate to the Markdown Previewer directory:
+1. Navigate to the `MarkdownPreviewer` directory:
    ```bash
    cd MarkdownPreviewer
    ```
 
-2. Install the dependencies:
+2. Install dependencies:
    ```bash
    npm install
    ```
 
+3. Run development server:
+   ```bash
+   npm run dev
+   ```
+   Starts Vite dev server at `http://localhost:5173`.
+
 ### Development Scripts
 
-In the project directory, you can run:
-
-#### Run Development Server
-```bash
-npm run dev
-```
-Starts the Vite dev server at `http://localhost:5173`. Opens in the browser and updates in real-time as you modify the code.
-
-#### Build for Production
-```bash
-npm run build
-```
-Compiles and bundles the application for production inside the `dist` folder.
-
-#### Run Linter
-```bash
-npm run lint
-```
-Lints the codebase using Oxlint for fast static analysis.
-
-#### Preview Production Build
-```bash
-npm run preview
-```
-Runs a local server to preview the production-ready build.
+- **Start Dev Server:** `npm run dev`
+- **Build Production Bundle:** `npm run build`
+- **Run Linter:** `npm run lint`
+- **Preview Production Build:** `npm run preview`
 
 ---
 
@@ -119,7 +104,6 @@ export function parseMarkdown(markdown: string): string {
 
 ---
 
-## 📄 License
+## 📝 License
 
-This project is open-source and available under the MIT License.
-
+This project is open-source under the MIT License.

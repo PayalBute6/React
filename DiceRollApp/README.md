@@ -1,5 +1,9 @@
 # 🎲 Interactive Dice Roll Dashboard
 
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?logo=javascript&logoColor=black)
+![Vite](https://img.shields.io/badge/Vite-8-646CFF?logo=vite&logoColor=white)
+
 An interactive, premium, and feature-rich React application built on Vite. It elevates the classic dice-rolling app into a beautiful dashboard with adjustable dice counts, multiple color themes, built-in mini-games, real-time statistics tracking, and custom sound synthesis.
 
 ---
@@ -13,13 +17,13 @@ An interactive, premium, and feature-rich React application built on Vite. It el
 - **🎨 Visual Themes**:
   - Instantly customize your dice look with premium color themes: Neon Purple, Ruby Red, Emerald Green, Electric Blue, and Amber Yellow.
 - **🎛️ Custom Dice Counts**:
-  - Roll anywhere from 1 to 5 dice simultaneously. The dashboard automatically calculates the sum and adjusts the layout beautifully.
+  - Roll anywhere from 1 to 5 dice simultaneously. The dashboard automatically calculates the sum and adjusts the layout dynamically.
 - **📈 Real-Time Statistics**:
   - Track **Total Rolls**, **High Score**, **Average Score**, and **Double Streaks** in a dedicated statistics panel.
 - **⚡ Physical 3D Roll & Shake**:
   - Highly polished CSS keyframe animations that mimic a real dice roll, including 3D rotations, bounces, and interactive shadow scale effects.
 - **🔊 Synthesized Web Audio Clatter**:
-  - Robust, self-contained sound effects generated programmatically using the browser's Web Audio API. No external audio files or downloads required.
+  - Robust, self-contained sound effects generated programmatically using the browser's Web Audio API. No external audio files required.
 - **🎉 Confetti Celebrations**:
   - Triggers interactive particle bursts and canvas celebrations whenever you roll a double (or match all dice) or win a Duel.
 
@@ -27,8 +31,8 @@ An interactive, premium, and feature-rich React application built on Vite. It el
 
 ## 🛠️ Tech Stack & Architecture
 
-- **Core**: React 19, JavaScript (JSX)
-- **Bundler/Dev Server**: Vite 8, Rolldown
+- **Core**: [React 19](https://react.dev/), JavaScript (JSX)
+- **Bundler/Dev Server**: [Vite 8](https://vite.dev/)
 - **Icons**: FontAwesome React (`@fortawesome/react-fontawesome`)
 - **Audio**: Web Audio API (custom synth envelope)
 - **Styling**: Vanilla CSS (Responsive Flexbox/Grid, Glassmorphic panels, keyframe animations)
@@ -38,42 +42,59 @@ An interactive, premium, and feature-rich React application built on Vite. It el
 ## 📂 Codebase Structure
 
 ```text
-├── public/                 # Static assets
-├── src/                    # Application source code
+DiceRollApp/
+├── src/
 │   ├── components/         # React components & styles
 │   │   ├── Die.jsx         # Renders a single die using FontAwesome icons
 │   │   ├── Die.css         # Physics wobble animations & styling for Die
 │   │   ├── RollDice.jsx    # Dashboard container managing games, stats & controls
 │   │   └── RollDice.css    # Dashboard layout & glassmorphic styles
 │   ├── utils/              # Helper utilities
-│   │   └── audio.js        # Web Audio sound synthesiser for dice rolling sound
+│   │   └── audio.js        # Web Audio sound synthesizer for dice rolling sound
 │   ├── App.jsx             # Root layout & FontAwesome setup
 │   ├── index.css           # Global theme variables (light/dark mode) and base styles
 │   └── main.jsx            # Application mount point
-├── vite.config.js          # Vite bundler and esbuild configuration
+├── vite.config.js          # Vite bundler configuration
 └── package.json            # Project dependencies & script commands
 ```
 
 ---
 
-## 🚀 Running the App
+## 🚀 Getting Started
 
-### 1. Install Dependencies
-```bash
-npm install
-```
+### Prerequisites
 
-### 2. Run the Development Server
-```bash
-npm run dev
-```
+Ensure you have [Node.js](https://nodejs.org/) installed (v18+ recommended).
 
-### 3. Build for Production
-```bash
-npm run build
-```
+### Installation & Run
 
-### 4. Preview the Production Build
-```bash
-npm run preview
-```
+1. Navigate to the `DiceRollApp` folder:
+   ```bash
+   cd DiceRollApp
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Build for production:
+   ```bash
+   npm run build
+   ```
+
+5. Preview the production build:
+   ```bash
+   npm run preview
+   ```
+
+---
+
+## 📝 License
+
+This project is open-source under the MIT License.

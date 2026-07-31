@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ⚡ Next.js App Router Playground (`demo`)
 
-## Getting Started
+A modern web application environment built with **Next.js 16**, **React 19**, **TypeScript**, and **Tailwind CSS v4** utilizing the App Router architecture.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## ✨ Key Technical Highlights
+
+- **⚡ Next.js App Router Architecture:** Organized using file-system routing inside the `app/` directory (`layout.tsx`, `page.tsx`).
+- **🎨 Tailwind CSS v4:** Modern styling setup with `@tailwindcss/postcss` and dynamic utility classes.
+- **🅰️ Geist Font Optimization:** Automated font loading and layout shift optimization via `next/font`.
+- **🛡️ Strict TypeScript Integration:** Full type safety across Next.js layouts, pages, and components.
+- **🧹 ESLint Code Quality:** Integrated Next.js linting rules (`eslint-config-next`).
+
+---
+
+## 📂 Project Architecture
+
+```text
+demo/
+├── app/
+│   ├── favicon.ico        # Next.js app favicon
+│   ├── globals.css        # Global CSS imports & Tailwind directives
+│   ├── layout.tsx         # Root HTML structure and font configuration
+│   └── page.tsx           # Home page component
+├── public/                # Static assets (SVG logos, images)
+├── eslint.config.mjs      # Flat ESLint configuration
+├── next.config.ts         # Next.js runtime configuration
+├── package.json           # Scripts & dependency definitions
+├── postcss.config.mjs     # PostCSS configuration for Tailwind CSS
+└── tsconfig.json          # TypeScript settings
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Getting Started
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Prerequisites
 
-## Learn More
+Ensure you have [Node.js](https://nodejs.org/) (version 18.17+ or higher) installed.
 
-To learn more about Next.js, take a look at the following resources:
+### Installation & Execution
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Navigate to the `demo` directory:
+   ```bash
+   cd demo
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-## Deploy on Vercel
+3. Launch the Next.js development server:
+   ```bash
+   npm run dev
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Available Scripts
+
+- `npm run dev`: Start Next.js development server.
+- `npm run build`: Compile and build optimized production bundle.
+- `npm run start`: Launch Next.js production server.
+- `npm run lint`: Run ESLint analysis across the project.
+
+---
+
+## 📝 License
+
+This project is open-source under the MIT License.

@@ -1,16 +1,77 @@
-# React + Vite
+# 🌐 React Components & Router Sandbox (`myapp`)
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A React application built with **Vite** and **React Router**, demonstrating foundational React architecture patterns including client-side routing, prop lifting, and stateful search filtering.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
 
-## React Compiler
+- **🌐 Client-Side Routing:** Powered by `react-router-dom` with routes for `/gallery` and `/products`.
+- **🔍 Filterable Product Table (`/products`):**
+  - Live search input filtering products by name in real-time.
+  - Stock availability toggle checkbox ("Only show products in stock").
+  - Dynamic categorization rows grouping products into categories (Fruits, Vegetables, Dairy).
+  - Visual styling feedback for out-of-stock items (highlighted in red).
+- **🖼️ Scientists Gallery (`/gallery`):** Reusable scientist profile cards displaying images, names, and accomplishment lists.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the Oxlint configuration
+## 🛠️ Tech Stack & Architecture
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- **Framework:** [React 19](https://react.dev/)
+- **Router:** [React Router 7](https://reactrouter.com/) (`BrowserRouter`, `Routes`, `Route`)
+- **Build Tool:** [Vite](https://vite.dev/)
+- **State Management:** React `useState` hooks for search filters and stock check states.
+
+---
+
+## 📂 Project Structure
+
+```text
+myapp/
+├── src/
+│   ├── pages/
+│   │   ├── gallary.jsx     # Gallery showcase component displaying profile cards
+│   │   └── products.jsx    # Searchable & filterable product table container & subcomponents
+│   ├── App.css             # Page wrapper styling
+│   ├── App.jsx             # React Router setup & route definitions
+│   ├── index.css           # Global baseline styles
+│   └── main.jsx            # Entry point mounting <App /> to DOM
+├── package.json            # Project dependencies & script commands
+└── vite.config.js          # Vite config
+```
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Ensure you have [Node.js](https://nodejs.org/) installed (version 18+ recommended).
+
+### Installation & Run
+
+1. Navigate to the project folder:
+   ```bash
+   cd myapp
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the dev server:
+   ```bash
+   npm run dev
+   ```
+
+4. Explore available routes in your browser:
+   - `http://localhost:5173/gallery`
+   - `http://localhost:5173/products`
+
+---
+
+## 📝 License
+
+This project is open-source under the MIT License.
