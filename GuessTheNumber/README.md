@@ -1,4 +1,4 @@
-# 🎲 Guess the Number Game
+# Guess the Number Game
 
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?logo=javascript&logoColor=black)
@@ -8,19 +8,19 @@ A sleek, lightweight web-based guessing game built with **React** and **Vite**. 
 
 ---
 
-## ✨ Features
+## Features
 
-- **🎲 Dynamic Secret Number Generation**: Automatically selects a random secret integer between 1 and 20 upon initialization.
-- **⌨️ Interactive User Input**: Responsive input field with visual hover and focus effects.
-- **💡 Real-Time Feedback**: Immediate logic processing to display hints:
-  - 📈 **Higher**: If the secret number is greater than your guess.
-  - 📉 **Lower**: If the secret number is less than your guess.
-  - 🎉 **Yuppiee Correct!!**: When your guess matches the secret number perfectly.
-  - ⚠️ **Enter Valid Input**: For non-numeric or invalid entries.
+- **Dynamic Secret Number Generation**: Automatically selects a random secret integer between 1 and 20 upon initialization.
+- **Interactive User Input**: Responsive input field with visual hover and focus effects.
+- **Real-Time Feedback**: Immediate logic processing to display hints:
+  - **Higher**: If the secret number is greater than your guess.
+  - **Lower**: If the secret number is less than your guess.
+  - **Yuppiee Correct!!**: When your guess matches the secret number perfectly.
+  - **Enter Valid Input**: For non-numeric or invalid entries.
 
 ---
 
-## 🛠️ Tech Stack & Architecture
+## Tech Stack & Architecture
 
 - **Frontend Library**: [React 19](https://react.dev/) (Class-based container component, functional presentation component)
 - **Build Tool**: [Vite](https://vite.dev/) (High-performance HMR and bundling)
@@ -34,7 +34,7 @@ A sleek, lightweight web-based guessing game built with **React** and **Vite**. 
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 GuessTheNumber/
@@ -50,7 +50,7 @@ GuessTheNumber/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -80,6 +80,6 @@ Ensure you have [Node.js](https://nodejs.org/) installed (version 18+ recommende
 
 ---
 
-## 📝 License
+## License
 
 This project is open-source under the MIT License.

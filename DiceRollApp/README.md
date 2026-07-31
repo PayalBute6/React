@@ -1,4 +1,4 @@
-# 🎲 Interactive Dice Roll Dashboard
+# Interactive Dice Roll Dashboard
 
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?logo=javascript&logoColor=black)
@@ -8,28 +8,28 @@ An interactive, premium, and feature-rich React application built on Vite. It el
 
 ---
 
-## ✨ Features
+## Features
 
-- **🎮 Dynamic Game Modes**:
+- **Dynamic Game Modes**:
   - **Free Play**: Casual roll to see your score, update stats, and view your rolling average.
   - **Double Chase**: A challenge mode where you roll until all selected dice land on the same face. Tracks your attempts!
   - **Dice Duel (VS AI)**: A turn-based match against an AI opponent. Roll in alternating turns and find out who gets the highest score in a best-of-5 rounds setup.
-- **🎨 Visual Themes**:
+- **Visual Themes**:
   - Instantly customize your dice look with premium color themes: Neon Purple, Ruby Red, Emerald Green, Electric Blue, and Amber Yellow.
-- **🎛️ Custom Dice Counts**:
+- **Custom Dice Counts**:
   - Roll anywhere from 1 to 5 dice simultaneously. The dashboard automatically calculates the sum and adjusts the layout dynamically.
-- **📈 Real-Time Statistics**:
+- **Real-Time Statistics**:
   - Track **Total Rolls**, **High Score**, **Average Score**, and **Double Streaks** in a dedicated statistics panel.
-- **⚡ Physical 3D Roll & Shake**:
+- **Physical 3D Roll & Shake**:
   - Highly polished CSS keyframe animations that mimic a real dice roll, including 3D rotations, bounces, and interactive shadow scale effects.
-- **🔊 Synthesized Web Audio Clatter**:
+- **Synthesized Web Audio Clatter**:
   - Robust, self-contained sound effects generated programmatically using the browser's Web Audio API. No external audio files required.
-- **🎉 Confetti Celebrations**:
+- **Confetti Celebrations**:
   - Triggers interactive particle bursts and canvas celebrations whenever you roll a double (or match all dice) or win a Duel.
 
 ---
 
-## 🛠️ Tech Stack & Architecture
+## Tech Stack & Architecture
 
 - **Core**: [React 19](https://react.dev/), JavaScript (JSX)
 - **Bundler/Dev Server**: [Vite 8](https://vite.dev/)
@@ -39,7 +39,7 @@ An interactive, premium, and feature-rich React application built on Vite. It el
 
 ---
 
-## 📂 Codebase Structure
+## Codebase Structure
 
 ```text
 DiceRollApp/
@@ -60,7 +60,7 @@ DiceRollApp/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -95,6 +95,6 @@ Ensure you have [Node.js](https://nodejs.org/) installed (v18+ recommended).
 
 ---
 
-## 📝 License
+## License
 
 This project is open-source under the MIT License.

@@ -1,4 +1,4 @@
-# 🍅 Glassmorphic Pomodoro Timer
+# Glassmorphic Pomodoro Timer
 
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
@@ -10,17 +10,17 @@ This app features a state-of-the-art dark-mode glassmorphic user interface that 
 
 ---
 
-## ✨ Features
+## Features
 
-- **🍅 Dynamic Backgrounds:** Automatically transitions background gradients between a warm focus-red (`#ff6b6b`) and a relaxing rest-green (`#2ecc71`).
-- **⭕ Circular Progress SVG Ring:** A sleek circular SVG indicator that shrinks smoothly in real-time as the countdown progresses.
-- **🎵 Web Audio API Chime:** Plays a clean bell chime upon session expiry—synthesized programmatically in the browser without loading audio files.
-- **⚙️ Customizable Durations:** Customize work and break durations inline. Inputs are safely locked while the timer is active to avoid accidental resets.
-- **🔮 Pulsing Glow Effect:** Visual pulse notifications that animate behind the timer ring during active countdowns.
+- **Dynamic Backgrounds:** Automatically transitions background gradients between a warm focus-red (`#ff6b6b`) and a relaxing rest-green (`#2ecc71`).
+- **Circular Progress SVG Ring:** A sleek circular SVG indicator that shrinks smoothly in real-time as the countdown progresses.
+- **Web Audio API Chime:** Plays a clean bell chime upon session expiry—synthesized programmatically in the browser without loading audio files.
+- **Customizable Durations:** Customize work and break durations inline. Inputs are safely locked while the timer is active to avoid accidental resets.
+- **Pulsing Glow Effect:** Visual pulse notifications that animate behind the timer ring during active countdowns.
 
 ---
 
-## 🛠️ Tech Stack & Architecture
+## Tech Stack & Architecture
 
 - **Framework:** [React 19](https://react.dev/) (TypeScript)
 - **Bundler:** [Vite](https://vite.dev/)
@@ -29,7 +29,7 @@ This app features a state-of-the-art dark-mode glassmorphic user interface that 
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 PomodoroTimerApp/
@@ -44,7 +44,7 @@ PomodoroTimerApp/
 
 ---
 
-## 🚀 How to Run Locally
+## How to Run Locally
 
 ### 1. Install Dependencies
 Navigate to the project directory and run `npm install`:
@@ -68,6 +68,6 @@ npm run build
 
 ---
 
-## 📝 License
+## License
 
 This project is open-source under the MIT License.

@@ -1,4 +1,4 @@
-# 📝 Markdown Previewer
+# Markdown Previewer
 
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
@@ -8,17 +8,17 @@ A real-time, side-by-side Markdown editor and preview application built with **R
 
 ---
 
-## ✨ Features
+## Features
 
-- **⚡ Real-Time Preview**: Type markdown on the left pane and see the rendered HTML update instantly on the right.
-- **🔒 Secure Rendering**: Built-in HTML sanitization via `DOMPurify` to protect against Cross-Site Scripting (XSS) attacks.
-- **📜 Predefined Templates**: Jumpstart your documents with ready-to-use template guides (e.g., GitHub README template).
-- **🛡️ TypeScript Support**: Full type safety across components, utilities, and custom hooks.
-- **⚡ Fast Build Times**: Powered by Vite and Oxlint for high-performance development and linting.
+- **Real-Time Preview**: Type markdown on the left pane and see the rendered HTML update instantly on the right.
+- **Secure Rendering**: Built-in HTML sanitization via `DOMPurify` to protect against Cross-Site Scripting (XSS) attacks.
+- **Predefined Templates**: Jumpstart your documents with ready-to-use template guides (e.g., GitHub README template).
+- **TypeScript Support**: Full type safety across components, utilities, and custom hooks.
+- **Fast Build Times**: Powered by Vite and Oxlint for high-performance development and linting.
 
 ---
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 - **Framework**: [React 19](https://react.dev/)
 - **Build Tool**: [Vite 8](https://vitejs.dev/)
@@ -29,7 +29,7 @@ A real-time, side-by-side Markdown editor and preview application built with **R
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 MarkdownPreviewer/
@@ -55,7 +55,7 @@ MarkdownPreviewer/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -88,7 +88,7 @@ MarkdownPreviewer/
 
 ---
 
-## 🔒 Security First
+## Security First
 
 All parsed markdown is sanitized on the fly using `DOMPurify`. This removes dangerous HTML tags and attributes (such as `<script>`, `onerror`, etc.), ensuring it is completely safe to display user-provided markdown content:
 
@@ -104,6 +104,6 @@ export function parseMarkdown(markdown: string): string {
 
 ---
 
-## 📝 License
+## License
 
 This project is open-source under the MIT License.

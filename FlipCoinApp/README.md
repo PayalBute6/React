@@ -1,4 +1,4 @@
-# 🪙 FlipCoinApp - Interactive Coin Flip Simulator
+# FlipCoinApp - Interactive Coin Flip Simulator
 
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?logo=javascript&logoColor=black)
@@ -8,17 +8,17 @@ An interactive, modern React application built with **Vite** that simulates a 3D
 
 ---
 
-## ✨ Features
+## Features
 
-- **🪙 3D Coin Flip Animation:** Features a smooth 3D spinning animation using CSS perspective and custom keyframes when flipping the coin.
-- **⚛️ Modern React Architecture:** Built using React Functional Components and standard Hooks (`useState`).
-- **📊 Real-time Statistics Tracker:** Dynamically tracks total flips, total heads, and total tails.
-- **🔄 Reset Stats:** Reset counts and visual coin state back to default at any time.
-- **💎 Premium Glassmorphic UI:** Styled with responsive glassmorphism, color gradients, and hover micro-interactions.
+- **3D Coin Flip Animation:** Features a smooth 3D spinning animation using CSS perspective and custom keyframes when flipping the coin.
+- **Modern React Architecture:** Built using React Functional Components and standard Hooks (`useState`).
+- **Real-time Statistics Tracker:** Dynamically tracks total flips, total heads, and total tails.
+- **Reset Stats:** Reset counts and visual coin state back to default at any time.
+- **Premium Glassmorphic UI:** Styled with responsive glassmorphism, color gradients, and hover micro-interactions.
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Core:** [React 19](https://react.dev/) (Functional Components, Hooks)
 - **Build Tool:** [Vite](https://vite.dev/)
@@ -26,7 +26,7 @@ An interactive, modern React application built with **Vite** that simulates a 3D
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 FlipCoinApp/
@@ -44,7 +44,7 @@ FlipCoinApp/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -71,6 +71,6 @@ FlipCoinApp/
 
 ---
 
-## 📝 License
+## License
 
 This project is open-source under the MIT License.

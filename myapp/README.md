@@ -1,22 +1,26 @@
-# 🌐 React Components & Router Sandbox (`myapp`)
+# React Components & Router Sandbox (`myapp`)
+
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
+![React Router](https://img.shields.io/badge/React_Router-7-CA4245?logo=reactrouter&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-8-646CFF?logo=vite&logoColor=white)
 
 A React application built with **Vite** and **React Router**, demonstrating foundational React architecture patterns including client-side routing, prop lifting, and stateful search filtering.
 
 ---
 
-## ✨ Features
+## Features
 
-- **🌐 Client-Side Routing:** Powered by `react-router-dom` with routes for `/gallery` and `/products`.
-- **🔍 Filterable Product Table (`/products`):**
+- **Client-Side Routing:** Powered by `react-router-dom` with routes for `/gallery` and `/products`.
+- **Filterable Product Table (`/products`):**
   - Live search input filtering products by name in real-time.
   - Stock availability toggle checkbox ("Only show products in stock").
   - Dynamic categorization rows grouping products into categories (Fruits, Vegetables, Dairy).
   - Visual styling feedback for out-of-stock items (highlighted in red).
-- **🖼️ Scientists Gallery (`/gallery`):** Reusable scientist profile cards displaying images, names, and accomplishment lists.
+- **Scientists Gallery (`/gallery`):** Reusable scientist profile cards displaying images, names, and accomplishment lists.
 
 ---
 
-## 🛠️ Tech Stack & Architecture
+## Tech Stack & Architecture
 
 - **Framework:** [React 19](https://react.dev/)
 - **Router:** [React Router 7](https://reactrouter.com/) (`BrowserRouter`, `Routes`, `Route`)
@@ -25,7 +29,7 @@ A React application built with **Vite** and **React Router**, demonstrating foun
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 myapp/
@@ -43,7 +47,7 @@ myapp/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -72,6 +76,6 @@ Ensure you have [Node.js](https://nodejs.org/) installed (version 18+ recommende
 
 ---
 
-## 📝 License
+## License
 
 This project is open-source under the MIT License.

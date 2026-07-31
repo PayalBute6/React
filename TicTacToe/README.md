@@ -1,4 +1,4 @@
-# ❌⭕ Interactive Tic-Tac-Toe with Time Travel
+# Interactive Tic-Tac-Toe with Time Travel
 
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?logo=javascript&logoColor=black)
@@ -8,21 +8,21 @@ A clean, responsive React application built on **Vite** implementing the classic
 
 ---
 
-## ✨ Features
+## Features
 
-- **🎮 Dynamic Game Flow**:
+- **Dynamic Game Flow**:
   - Alternates turns automatically between `X` and `O` players.
   - Detects and displays the winner instantly upon completing a 3-in-a-row line.
   - Prevents clicks on occupied squares or after a player has won.
-- **⏳ Time-Travel History**:
+- **Time-Travel History**:
   - Logs every move made during the game.
   - Provides interactive navigation buttons allowing players to jump back in time to any previous state of the board.
-- **📐 Responsive Grid**:
+- **Responsive Grid**:
   - Simple, robust layout centered on screen with dynamic grid boundaries.
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Framework:** [React 19](https://react.dev/)
 - **Build Tool:** [Vite](https://vite.dev/)
@@ -30,7 +30,7 @@ A clean, responsive React application built on **Vite** implementing the classic
 
 ---
 
-## 📂 Codebase Structure
+## Codebase Structure
 
 ```text
 TicTacToe/
@@ -46,7 +46,7 @@ TicTacToe/
 
 ---
 
-## 🚀 Running the App
+## Running the App
 
 ### 1. Install Dependencies
 ```bash
@@ -66,6 +66,6 @@ npm run build
 
 ---
 
-## 📝 License
+## License
 
 This project is open-source under the MIT License.

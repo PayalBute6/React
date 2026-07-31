@@ -1,20 +1,25 @@
-# ⚡ Next.js App Router Playground (`demo`)
+# Next.js App Router Playground (`demo`)
+
+![Next.js](https://img.shields.io/badge/Next.js-16-000000?logo=nextdotjs&logoColor=white)
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?logo=tailwindcss&logoColor=white)
 
 A modern web application environment built with **Next.js 16**, **React 19**, **TypeScript**, and **Tailwind CSS v4** utilizing the App Router architecture.
 
 ---
 
-## ✨ Key Technical Highlights
+## Key Technical Highlights
 
-- **⚡ Next.js App Router Architecture:** Organized using file-system routing inside the `app/` directory (`layout.tsx`, `page.tsx`).
-- **🎨 Tailwind CSS v4:** Modern styling setup with `@tailwindcss/postcss` and dynamic utility classes.
-- **🅰️ Geist Font Optimization:** Automated font loading and layout shift optimization via `next/font`.
-- **🛡️ Strict TypeScript Integration:** Full type safety across Next.js layouts, pages, and components.
-- **🧹 ESLint Code Quality:** Integrated Next.js linting rules (`eslint-config-next`).
+- **Next.js App Router Architecture:** Organized using file-system routing inside the `app/` directory (`layout.tsx`, `page.tsx`).
+- **Tailwind CSS v4:** Modern styling setup with `@tailwindcss/postcss` and dynamic utility classes.
+- **Geist Font Optimization:** Automated font loading and layout shift optimization via `next/font`.
+- **Strict TypeScript Integration:** Full type safety across Next.js layouts, pages, and components.
+- **ESLint Code Quality:** Integrated Next.js linting rules (`eslint-config-next`).
 
 ---
 
-## 📂 Project Architecture
+## Project Architecture
 
 ```text
 demo/
@@ -33,7 +38,7 @@ demo/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -67,6 +72,6 @@ Ensure you have [Node.js](https://nodejs.org/) (version 18.17+ or higher) instal
 
 ---
 
-## 📝 License
+## License
 
 This project is open-source under the MIT License.
