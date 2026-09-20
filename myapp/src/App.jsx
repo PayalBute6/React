@@ -1,4 +1,4 @@
-import Gallery from "./pages/gallary";
+import Gallery from "./pages/gallery";
 import FilterableProductTable from "./pages/products";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 

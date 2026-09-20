@@ -35,7 +35,7 @@ A React application built with **Vite** and **React Router**, demonstrating foun
 myapp/
 ├── src/
 │   ├── pages/
-│   │   ├── gallary.jsx     # Gallery showcase component displaying profile cards
+│   │   ├── gallery.jsx     # Gallery showcase component displaying profile cards
 │   │   └── products.jsx    # Searchable & filterable product table container & subcomponents
 │   ├── App.css             # Page wrapper styling
 │   ├── App.jsx             # React Router setup & route definitions
